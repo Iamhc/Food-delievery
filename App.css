@@ -1,0 +1,180 @@
+#rescard{
+  margin:10px;
+  width:250px;
+  color:rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  text-align:center;
+  overflow:hidden;
+  cursor:pointer;
+ 
+}
+#rescard:hover{
+  color:black;
+  translate:1px 1px;
+  
+}
+body{
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  
+}
+#home,#about,#contact,#more{
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+  border: none;
+}
+a{
+  text-decoration: none;
+}
+#cuimg,#oimg,#oneimg{border-radius: 2%;
+  width:250px;
+height:200px;
+}
+img:hover{
+  box-shadow: 2px 2px px rgb(255, 0, 0);
+}
+#head{
+  font-weight: lighter;
+  margin-left:10px;
+
+}
+#container{
+  display:flex;
+  flex-wrap:wrap;
+
+}
+#cuis{
+  font-size:15px;
+  color:rgb(77, 77, 77);
+  font-weight: lighter;
+}
+
+#filter{
+  width:60px;
+  
+  margin-left:10px;
+}
+#nav{
+  display:flex;
+  flex-wrap:wrap;
+}
+#input{
+  
+  height:20px;
+  margin-left:10px;
+}
+#search{
+background:black;
+color:white;
+
+}
+#res{
+  background:grey;
+  width:300px;
+  height:250px;
+  margin-left:10px;
+  margin-top:20px;
+}
+#resc{
+display:flex;
+flex-wrap:wrap;
+
+}
+#navel{
+  display:flex;
+  flex-wrap:flex;
+  margin-left:2px;
+ margin-bottom: 10px;
+
+}
+#home{
+  margin-left:10px;
+}
+#about{
+  margin-left:10px;
+}
+#contact{
+  margin-left:10px;
+}
+#more{
+  margin-left:10px;
+}
+#err{
+  margin-left:5px;
+}
+
+#city{
+  margin: 10px;
+  font-weight: lighter;
+}
+
+#menu{
+ 
+  margin-left:15%;
+  
+}
+#restrocard{
+
+  width:250px;
+
+}
+#reg{
+  color:black;
+}
+#resname{
+  color:rgb(0, 0, 0);
+ font-family: Baskervville SC;
+ font-weight: bold;
+ font-size: 25px;;
+  border-bottom: 2px solid khaki;
+  
+}
+
+#cuisinestwo{
+  
+  margin-bottom: 10px;
+}
+#offers{
+  width:800px;
+  height:205px;
+  color:rgb(255, 255, 255);
+ 
+  background-color: rgb(56, 56, 56);
+  order:2px solid rgb(174, 108, 108);
+}
+#timg{
+  margin: 10px;
+  padding-top: 2px;
+
+ 
+}
+#tprices{
+  margin-left: 40%;
+  margin-top: -20%;
+
+}
+#order{
+  margin-left: 40%;
+  
+}
+#order button{
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 240, 240);
+  text-decoration: none;
+  border:none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#abouthc{
+  font-weight: lighter;
+  font-size: 20px;
+}
+#myimg{
+  margin-left:55vh;
+  margin-top:-25vh;
+  border-radius: 2%;
+}
+#abouthc p{
+  margin-left: 2vh;
+}
