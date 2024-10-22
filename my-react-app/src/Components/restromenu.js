@@ -2,37 +2,28 @@ import { useEffect, useState } from "react";
 import Offers from "./Offers";
 import Shimmer from "./Shimmer.js";
 import { useParams } from "react-router-dom";
+import useGetData from "../Utils/useGetData.js";
+import Onlinestatus from "./onlinestatus.js";
+
 const Restromenu = () => {
   const resid = useParams();
+
+  const Nadata = useGetData(resid);
   console.log(resid);
   const reso = 352738;
   const [rdata, setdata] = useState([]);
-  const fetchdata = async () => {
-    const data = await fetch(
-      // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.627905&lng=77.4092323&restaurantId="+resid.resId+"&catalog_qa=undefined&submitAction=ENTER"
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.627905&lng=77.4092323&restaurantId=" +
-        resid.resId +
-        "&catalog_qa=undefined&submitAction=ENTER"
-    );
-    //"RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/4c140390-e252-47b2-a5aa-6d199918bb10_189174.JPG"
-    //https://media-assets.swiggy.com/swiggy/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/4c140390-e252-47b2-a5aa-6d199918bb10_189174.JPG
-    const json = await data.json();
-    setdata(json);
-    console.log(json);
-
-    // console.log(json.data.cards[2].card.card.info.name);
-    //json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards[0].card.info.name
-  };
-  //{rdata?.data.cards[2]?.card.card.info}
 
   useEffect(() => {
-    fetchdata();
-  }, []);
+    setdata(Nadata);
+  });
   if (rdata.length == 0) {
     return <Shimmer />;
   }
 
   //   console.log(rdata);
+  if (Onlinestatus === false) {
+    return "no internet";
+  }
 
   return (
     <div id="menu">

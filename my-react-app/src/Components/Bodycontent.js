@@ -4,12 +4,14 @@ import Main from "./Main.js";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
-
+import Onlinestatus from "./onlinestatus.js";
+//import useGetData from "../Utils/useGetData.js";
 const Body = () => {
   const [Od, setodata] = useState([]);
   const [search, setsearch] = useState([]);
   const [input, inputvalue] = useState([]);
   const [rawdata, setrdata] = useState([]);
+  // const Jdata = useGetData();
   const funct = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.627905&lng=77.4092323&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -26,6 +28,7 @@ const Body = () => {
     let json = await data.json();
     console.log(json);
     console.log("rendered");
+
     //json=json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants+json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     setodata(
       json.data.cards[1]?.card.card.gridElements?.infoWithStyle?.restaurants
@@ -54,6 +57,9 @@ const Body = () => {
     return <Shimmer />;
   }
 
+  if (Onlinestatus == false) {
+    return "no internet";
+  }
   return (
     <>
       <div id="nav">

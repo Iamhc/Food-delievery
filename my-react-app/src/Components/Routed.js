@@ -5,6 +5,8 @@ import Error from "./Error";
 import Body from "./Bodycontent";
 import { createBrowserRouter } from "react-router-dom";
 import About from "./About";
+import { lazy, Suspense } from "react";
+const Aboutlazy = lazy(() => import("./About"));
 const Routed = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +18,11 @@ const Routed = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<h1>not here yet</h1>}>
+            <Aboutlazy />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
