@@ -29,10 +29,11 @@ class Userclass extends React.Component {
 
     return (
       <div id="abouthc">
-        <p>Name:-{this.state?.fetched[0]?.user.name}</p>
-        <p>About:-{this.state?.fetched[0]?.user.bio}</p>
-        <p>location:-{this.state?.fetched[0]?.user.location}</p>
-
+        <para>
+          <p>Name:-{this.state?.fetched[0]?.user.name}</p>
+          <p>About:-{this.state?.fetched[0]?.user.bio}</p>
+          <p>location:-{this.state?.fetched[0]?.user.location}</p>
+        </para>
         <img
           src="https://avatars.githubusercontent.com/u/86661174?v=4"
           width="400px"

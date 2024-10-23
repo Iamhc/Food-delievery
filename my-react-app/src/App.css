@@ -169,12 +169,17 @@ flex-wrap:wrap;
 #abouthc{
   font-weight: lighter;
   font-size: 20px;
+  display: flex;
 }
 #myimg{
-  margin-left:55vh;
-  margin-top:-25vh;
+  margin-left:0vh;
+  margin-top:0vh;
   border-radius: 2%;
 }
 #abouthc p{
   margin-left: 2vh;
+}
+para{
+  width:30vw;
+
 }
